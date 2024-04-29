@@ -14,6 +14,7 @@ class Login extends StatelessWidget {
     LoginController controller = new LoginController();
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -48,14 +49,14 @@ class Login extends StatelessWidget {
 
   Container textoRecuperar(BuildContext context, Colores colores) {
     return Container(
-          margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.01),
-            child: Row(
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.01),
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("¿Olvidaste tu contraseña?",
                 style: TextStyle(color: colores.textoBlanco)),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 //Codigo
               },
               child: Text(
@@ -105,6 +106,7 @@ class Login extends StatelessWidget {
           top: MediaQuery.of(context).size.height * 0.13),
       child: TextField(
         controller: controller.user,
+        style: TextStyle(color: colores.textoBlanco),
         decoration: InputDecoration(
             hintText: "Usuario",
             hintStyle: TextStyle(color: colores.textoBlancoTransparente),
@@ -157,6 +159,8 @@ class Login extends StatelessWidget {
           top: 20),
       child: TextField(
         controller: controller.pass,
+        obscureText: true,
+        style: TextStyle(color: colores.textoBlanco),
         decoration: InputDecoration(
             hintText: "Contraseña",
             hintStyle: TextStyle(color: colores.textoBlancoTransparente),
@@ -171,17 +175,17 @@ class Login extends StatelessWidget {
       ),
     );
   }
-  
+
   textoCrearCuenta(BuildContext context, Colores colores) {
-     return Container(
-          margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.15),
-            child: Row(
+    return Container(
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.15),
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("¿No tienes cuenta?",
                 style: TextStyle(color: colores.textoBlanco)),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 //Codigo
               },
               child: Text(
