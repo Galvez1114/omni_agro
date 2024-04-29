@@ -8,5 +8,6 @@ class Colores{
   Color colorPrimario = Color(0xFF24511A);
   Color textoVerde = Color(0xFF068f27);
   Color textFieldLogin = Color(0x880f131f);
+  Color colorMenuDrawer = Color.fromARGB(255, 8, 62, 21);
 
 }

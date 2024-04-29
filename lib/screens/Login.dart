@@ -14,37 +14,34 @@ class Login extends StatelessWidget {
     LoginController controller = new LoginController();
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: SafeArea(
-        child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("img/fondo.jpg"),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.7), BlendMode.darken))),
-          child: Column(children: [
-            Center(
-              child: Container(
-                margin: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    textOMNI(colores, fuente),
-                    logoOMNI(),
-                    textAGRO(colores, fuente),
-                  ],
-                ),
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("img/fondo.jpg"),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(0.7), BlendMode.darken))),
+        child: Column(children: [
+          Center(
+            child: Container(
+              margin: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  textOMNI(colores, fuente),
+                  logoOMNI(),
+                  textAGRO(colores, fuente),
+                ],
               ),
             ),
-            textFieldUser(context, controller, colores),
-            textFieldPassword(context, controller, colores),
-            btnIniciarSesion(context, colores),
-            textoRecuperar(context, colores),
-            textoCrearCuenta(context, colores),
-          ]),
-        ),
+          ),
+          textFieldUser(context, controller, colores),
+          textFieldPassword(context, controller, colores),
+          btnIniciarSesion(context, colores),
+          textoRecuperar(context, colores),
+          textoCrearCuenta(context, colores),
+        ]),
       ),
     );
   }
